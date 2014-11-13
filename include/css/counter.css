@@ -1,0 +1,32 @@
+ul.cd {
+    float: left;
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+li.t {
+    background: url("../img/digits-top.png") no-repeat scroll 0 0 transparent;
+    height: 23px;
+    margin-top: -1px;
+    width: 27px;
+}
+li.b {
+    background: url("../img/digits-bottom.png") no-repeat scroll 0 0 transparent;
+    height: 24px;
+    width: 27px;
+}
+li.s {
+    background: url("../img/comma.png") no-repeat scroll 1px 37.5px transparent;
+    height: 43px;
+    width: 3px;
+}
+#decimal {
+    background: url("../img/point.png") no-repeat scroll 1px 37.5px transparent;
+    float: left;
+    height: 43px;
+    width: 3px;
+}
+/*
+#AdRequestsCounter {
+    margin-top: -20px;
+}*/
