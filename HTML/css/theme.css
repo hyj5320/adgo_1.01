@@ -1680,13 +1680,13 @@ aside ul.nav-list > li > a {
 .map-section {
 	background: transparent url(../img/map-top.png) center 0 no-repeat;
 	padding-top: 220px;
-	margin-top: 40px;
+	margin-top: 0px;
 }
 
 /* Home Intro */
 .home-intro {
 	background-color: #171717;
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	overflow: hidden;
 	padding: 20px 0 10px 0;
 	position: relative;

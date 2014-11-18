@@ -24,7 +24,7 @@ class auth extends CI_Controller
 		}
 		$foot['facebook'] = $this->site_config_model->getValue('facebook');
 		$foot['twitter'] = $this->site_config_model->getValue('twitter');
-		$this->load->view('main_foot_view',$foot);
+		$this->load->view('main_foot_view_addition',$foot);
 	}
 	
 	function login()

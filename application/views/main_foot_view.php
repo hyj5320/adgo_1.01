@@ -1,38 +1,61 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');?>
-		<div id="footerMain">
-			<div id="footer">
-		 		<div id="footTop">
-			    	<div class="fMenu">
-			        	<h4>PAGES</h4>
-			            <ul>
-			            	<li><a href="<?php echo base_url()?>main" title="">Home</a></li>
-			            	<li><a href="<?php echo base_url()?>about/" title="">About Us</a></li>
-			            	<li><a href="<?php echo base_url()?>auth/contact" title="">Contact Us</a></li>                                
-			            	<li><a href="#" title="">FAQ</a></li>                                
-			            </ul>
-			        </div>
-			        
-			    	<div class="fMenu">
-			        	<h4>PUBLISHERS</h4>
-			            <ul>
-			            	<li><a href="<?php echo base_url()?>auth/register" title="">Apply Now</a></li>
-			            	<li><a href="<?php echo base_url()?>cpm/" title="">Our Rates</a></li>
-			            	<li><a href="#" title="">HTTPS/SSL Ads</a></li>
-			            </ul>
-			        </div> 
-			        <div class="fMenu">
-						<a href="<?php echo $facebook;?>" title="" class="socLink" rel="nofollow"><img src="<?php echo base_url()?>include/img/faceBook.png" width="40" height="40" alt="" /></a>
-		     	   </div>
-			        <div class="footerBann">
-			        	<p>Have a question?</p>
-			            <p><a href="<?php echo base_url()?>auth/contact"><font style="color:#2b93c8">24-7</font> Support is here to answer!</a></p>
-			            <!-- <a href="/contact-us/" title="">Contact Us</a> -->
-		     	   </div>   
+					<!-- EXPORT AS A FOOTER VIEW -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="pages">
+								<h4>Pages</h4>
+								<a href="<?php echo base_url()?>main" id="footer_content">Home</a><br>
+								<a href="<?php echo base_url()?>about/" id="footer_content">About Us</a><br>
+								<a href="<?php echo base_url()?>auth/contact" id="footer_content">Contact Us</a><br>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h4>Publishers</h4>
+							<div id="footer_content">
+								<a href="<?php echo base_url()?>auth/register" >Apply Now</a><br>
+								<a href="<?php echo base_url()?>cpm/" >Our Rates</a><br>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<h4>Follow Us</h4>
+							<div class="social-icons">
+								<ul class="social-icons">
+									<li class="facebook"><a href="https://www.facebook.com/adgotv" target="_blank" data-placement="bottom" rel="tooltip" title="Facebook">Facebook</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div id="footCopyr">&copy;2014 ADGO.TV. All rights reserved.</div>
-				
-			</div>
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-7">
+								
+							</div>
+							<div class="col-md-3">
+								<div id="footer_content" style="float:right;"><br>© Copyright 2014. All Rights Reserved.</div>
+							</div>
+							<div class="col-md-2">
+								<a href="<?php echo base_url()?>" class="logo">
+									<img alt="Porto Website Template" class="img-responsive" src="<?php echo base_url()?>images/logo_Bottom.png">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
-	
+
 	</body>
 </html>
+
+
+<!-- Specific Page Vendor and Views -->
+<script src="<?php echo base_url()?>HTML/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="<?php echo base_url()?>HTML/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="<?php echo base_url()?>HTML/vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+<script src="<?php echo base_url()?>HTML/js/views/view.home.js"></script>

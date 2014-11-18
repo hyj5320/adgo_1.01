@@ -139,161 +139,309 @@ $privacy = array(
 <?php $attributes = array('name' => 'tx_editor_form', 'id' => 'tx_editor_form');?>
 <?php echo form_open($this->uri->uri_string(), $attributes); ?>
     
-	<script type="text/javascript">        
-	    $(document).ready(function(){
-	    	$("select[name='timezone1']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
-	    	$("select[name='timezone2']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
-	    	$("select[name='site_category']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
-	    })
-	</script>
-	
-		<div id="content">
-	          <h1 class="applTitle">Publisher Application Form</h1>
-	          <div class="applyFormCenterLine"></div>
-	     	  <p  class="topSlog">Please answer the questions below to apply to the Mad Ads Media publisher network.</p>   
 
-	     	  <div class="application">
-	      	  		<div class="applInn">
-	        	
-	         		   <div class="applInfoL">
-	         		   		<h3>Publisher Information</h3>
-	         		   		<p ><label>Email </label><input name="email" type="text" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Password </label><input name="password" type="password" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Verify Password </label><input name="confirm_password" type="password" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($confirm_password['name']); ?><?php echo isset($errors[$confirm_password['name']])?$errors[$confirm_password['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Company Name </label><input name="company" type="text" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($company['name']); ?><?php echo isset($errors[$company['name']])?$errors[$company['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Contact Name </label><input name="username" type="text" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($username['name']); ?><?php echo isset($errors[$username['name']])?$errors[$username['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Phone Number </label><input name="phone" type="text" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($phone['name']); ?><?php echo isset($errors[$phone['name']])?$errors[$phone['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Time Zone </label> </p>
-	         		   		<div style=" width: 315px; height: 42px;float:right;margin-right:5px">
-	         		   			<select name="timezone1" id="timezone1" class="select-block ">
-	         		   				<option>Please Select...</option>
-	         		   			</select>
-	         		   		</div>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($timezone1['name']); ?><?php echo isset($errors[$timezone1['name']])?$errors[$timezone1['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>Country </label> </p>
-	         		   		<div style=" width: 315px; height: 42px;float:right;margin-right:5px">
-	         		   			<select name="timezone2" id="timezone2" class="select-block ">
-	         		   				<option>Please Select...</option>
-	         		   			</select>
-	         		   		</div>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($timezone2['name']); ?><?php echo isset($errors[$timezone2['name']])?$errors[$timezone2['name']]:''; ?></label>
-	         		   		
-	         		   		<p ><label>State </label><input type="text" name="state" value="" placeholder="" class="form-control"></p>
-	         		   		<label style="width:430px; color: red;"><?php echo form_error($state['name']); ?><?php echo isset($errors[$state['name']])?$errors[$state['name']]:''; ?></label>
-	         		   </div>
-	         
-	         			<div class="applInfoR">
-	         				<h3>About Your Site</h3>
-	         			
-	         				<div style="width: 100%;height: 30px;margin-top: 18px;">
-         					<p><label>Site Type </label></p>
-         					<label class="radio selectTypeRadio" ><input type="radio" name="site_kind" id="optionsRadios1" value="1" data-toggle="radio">WebSite</label>
-         					<label class="radio selectTypeRadio" ><input type="radio" name="site_kind" id="optionsRadios1" value="2" data-toggle="radio">Application</label>
-         					<label class="radio selectTypeRadio" ><input type="radio" name="site_kind" id="optionsRadios1" value="3" data-toggle="radio">Tumblr Account</label>
-         				</div>
-         				<label style="width:430px; color: red;"><?php echo form_error($site_kind['name']); ?><?php echo isset($errors[$site_kind['name']])?$errors[$site_kind['name']]:''; ?></label>
-         				   
-         				<p ><label>URL </label><input name="site_url" type="text" value="" placeholder="" class="form-control"></p>
-         				<label style="width:430px; color: red;"><?php echo form_error($site_url['name']); ?><?php echo isset($errors[$site_url['name']])?$errors[$site_url['name']]:''; ?></label>
-         				
-         				<p ><label>Title </label><input name="site_title" type="text" value="" placeholder="" class="form-control"></p>
-         				<label style="width:430px; color: red;"><?php echo form_error($site_title['name']); ?><?php echo isset($errors[$site_title['name']])?$errors[$site_title['name']]:''; ?></label>
-         				
-         				<p ><label>Description </label><input name="site_description" type="text" value="" placeholder="" class="form-control"></p>
-         				<label style="width:430px; color: red;"><?php echo form_error($site_description['name']); ?><?php echo isset($errors[$site_description['name']])?$errors[$site_description['name']]:''; ?></label>
-         				
-         				<p ><label>Keywords </label><input name="site_keywords" type="text" value="" placeholder="" class="form-control"></p>
-         				<label style="width:430px; color: red;"><?php echo form_error($site_keywords['name']); ?><?php echo isset($errors[$site_keywords['name']])?$errors[$site_keywords['name']]:''; ?></label>
-         				
-         				<p ><label>Category </label> </p>
-         				<div style=" width: 315px; height: 42px;float:right;margin-right:5px">
-         		   			<select name="site_category" id="site_category" class="select-block ">
-         		   				<option>Please Select...</option>
-         		   			</select>
-		         		   	<label style="width:430px; color: red;"><?php echo form_error($site_category['name']); ?><?php echo isset($errors[$site_category['name']])?$errors[$site_category['name']]:''; ?></label>
-	         		   	</div>
-	         		   	
-	         		   	<div style="width: 100%;height: 30px;margin-top: 18px">
-         					<p><label>Privacy Policy </label></p>
-         					<label class="radio selectPrivacyRadio" ><input type="radio" name="privacy" id="optionsRadios1" value="1" data-toggle="radio">No</label>
-         					<label class="radio selectPrivacyRadio" ><input type="radio" name="privacy" id="optionsRadios1" value="2" data-toggle="radio">Yes</label>
-         				</div>
-         				<label style="width:430px; color: red;"><?php echo form_error($privacy['name']); ?><?php echo isset($errors[$privacy['name']])?$errors[$privacy['name']]:''; ?></label>
-         					
-         				<p ><label>Daily Visits </label><input name="daily_visits" type="text" value="" placeholder="" class="form-control"></p>
-         				<label style="width:430px; color: red;"><?php echo form_error($daily_visits['name']); ?><?php echo isset($errors[$daily_visits['name']])?$errors[$daily_visits['name']]:''; ?></label>
-         				
-         				<h1 id="checkAgreeService">I agree to the Terms of Service/Publisher Guidelines         
-         				</h1>  
-         				<label class="checkbox" for="checkbox1" style="float:right;margin-top: 25px;" ><input type="checkbox" name="agree" value="1" id="checkbox1" data-toggle="checkbox"> </label>
-         				
-		           		 <button name="register" class="btn btn-lg btn-block btn-info" type="submit" class="btn btn-info">APPLY</button>
-		           		 
-         				<div class="clearfix"></div>
-         			</div>
-           		 </div>
-           		 <?php echo form_close(); ?>
-           		 
-           		 <div class="applInn">
-	           		 <div class="applyFormCenterLongLine" style="margin-left: 20px"></div>
-	           		 <div class="applStrL">
-	           		     <h3 style="color: #3399db">Why ADGO?</h3>
-	                	<ul>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-		                	<li><a href="#" title="">Optimization agree to the Terms of Service/Publisher Guidelines </a></li>
-	                	</ul>
-	           		 </div>
-	           		 <div class="applStrR">
-	           		     <h3 >Contact US</h3>
-	                	 <ul>
-		                	<li><a href="#" title="">Have any questions  before joining?</a></li>
-		                	<li> <a href="<?php echo base_url()?>auth/contact" title="">Feel free to use the<font style="color: #DE3232">&nbsp;contact form</font> or <font style="color: #DE3232">&nbsp;email&nbsp;</font> us at</a></li>
-		                 </ul>
-		                	
-	                	<div class="applRbox">
-	                		<a href="<?php echo base_url()?>cpm/" title="">
-                			<P>HOW MUCH CAN I MAKE?</P>
-                			<!-- <P>See just how much revenue we can make you with our Revenue Calculator.</P> -->
-                  	 		 <p class="howMuch">See just how much revenue<br> we can make you with our Revenue Calculator.</p>  
-              		  		<div class="imgCalcR"></div>
-              		  		<div class="clearfix"></div>
-              		  		</a>
-              		   </div>  
-	              		  	
-		           	</div>
-	           	 </div>
-	           	 <script type="text/javascript">
-				    <?php foreach ($timezone_arr as $row){?>
-						$("#timezone1").append("<option value='<?php echo $row->timezone_id;?>'><?php echo $row->timezone_name;?></option>");
-					<?php }?>
-					<?php foreach ($country_arr as $row){?>
-						$("#timezone2").append("<option value='<?php echo $row->country_id;?>'><?php echo $row->country_name;?></option>");
-					<?php }?>
-					<?php foreach ($category_arr as $row){?>
-						$("#site_category").append("<option value='<?php echo $row->category_id;?>'><?php echo $row->category_name;?></option>");
-					<?php }?>
-				</script>
-	          </div>
- 		 </div>
- 		 
- 		 <div id="footerBlock"></div>
- 		 
+	
+<div id="content">
+
+	<section class="page-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+						<li><a href="<?php echo base_url()?>">Home</a></li>
+						<li class="active">Apply Now</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Application Form</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="container" style="text-align:left;">
+		<div class="row">
+			<div class="col-md-6">
+				<section class="panel">
+					<header class="panel-heading">	
+						<h4 style="color:black;"><b>Publisher Information</b></h4>
+					</header>
+				</section>
+					
+				<div class="panel-body">
+					<div class="form-horizontal form-bordered">
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Email</label>
+							<div class="col-md-7">
+								<input name="email" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></label>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Password</label>
+							<div class="col-md-7">
+								<input name="password" type="password" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$password[$email['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Verify Password</label>
+							<div class="col-md-7">
+								<input name="confirm_password" type="password" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($confirm_password['name']); ?><?php echo isset($errors[$confirm_password['name']])?$errors[$confirm_password['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Comapny Name</label>
+							<div class="col-md-7">
+								<input name="company" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($company['name']); ?><?php echo isset($errors[$company['name']])?$errors[$company['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Conctact Name</label>
+							<div class="col-md-7">
+								<input name="username" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($username['name']); ?><?php echo isset($errors[$username['name']])?$errors[$username['name']]:''; ?></label>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Phone Number</label>
+							<div class="col-md-7">
+								<input name="phone" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($phone['name']); ?><?php echo isset($errors[$phone['name']])?$errors[$phone['name']]:''; ?></label>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Time Zone</label>
+							<div class="col-md-7">
+		     		   			<select name="timezone1" id="timezone1" class="form-control">
+		     		   				<option>Please Select...</option>
+		     		   			</select>
+		     		   			<label style="color:red;"><?php echo form_error($timezone1['name']); ?><?php echo isset($errors[$timezone1['name']])?$errors[$timezone1['name']]:''; ?></label>
+							</div>
+							
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Country</label>
+							<div class="col-md-7">
+		     		   			<select name="timezone2" id="timezone2" class="form-control">
+		     		   				<option>Please Select...</option>
+		     		   			</select>
+							<label style="color:red;"><?php echo form_error($timezone2['name']); ?><?php echo isset($errors[$timezone2['name']])?$errors[$timezone2['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">State</label>
+							<div class="col-md-7">
+								<input name="state" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($state['name']); ?><?php echo isset($errors[$state['name']])?$errors[$state['name']]:''; ?></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				
+				<section class="panel">
+					<header class="panel-heading">	
+						<h4 style="color:black;"><b>About Your Site</b></h4>
+					</header>
+				</section>
+				
+				<div class="panel-body">
+					<div class="form-horizontal form-bordered">
+
+						<!--  radio -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Site Type</label>
+							<div class="col-md-8">
+								<div class="radio">
+		         					<label style="margin-right:3px">
+		         						<input type="radio" name="site_kind" id="optionsRadios1" value="1" data-toggle="radio">WebSite
+		         					</label>
+		         					<label style="margin-right:3px">
+		         						<input type="radio" name="site_kind" id="optionsRadios1" value="2" data-toggle="radio">Application
+		         					</label>
+		         					<label>
+		         						<input type="radio" name="site_kind" id="optionsRadios1" value="3" data-toggle="radio">Tumblr Account											
+									</label>
+								</div>
+								<label style="color:red;"><?php echo form_error($site_kind['name']); ?><?php echo isset($errors[$site_kind['name']])?$errors[$site_kind['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">URL</label>
+							<div class="col-md-7">
+								<input name="site_url" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($site_url['name']); ?><?php echo isset($errors[$site_url['name']])?$errors[$site_url['name']]:''; ?></label>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Title</label>
+							<div class="col-md-7">
+								<input name="site_title" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($site_title['name']); ?><?php echo isset($errors[$site_title['name']])?$errors[$site_title['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Description</label>
+							<div class="col-md-7">
+								<input name="site_description" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($site_description['name']); ?><?php echo isset($errors[$site_description['name']])?$errors[$site_description['name']]:''; ?></label>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Keywords</label>
+							<div class="col-md-7">
+								<input name="site_keywords" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($site_keywords['name']); ?><?php echo isset($errors[$site_keywords['name']])?$errors[$site_keywords['name']]:''; ?></label>
+							</div>
+						</div>
+						
+
+						<!-- option -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Category</label>
+							<div class="col-md-7">
+		     		   			<select name="site_category" id="site_category" class="form-control">
+		     		   				<option>Please Select...</option>
+		     		   			</select>
+							<label style="color:red;"><?php echo form_error($site_category['name']); ?><?php echo isset($errors[$site_category['name']])?$errors[$site_category['name']]:''; ?></label>
+							</div>
+						</div>
+			
+						<!--  radio -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Privacy Policy</label>
+							<div class="col-md-7">
+								<div class="radio">
+		         					<label style="margin-right:10px">
+		         						<input type="radio" name="privacy" id="optionsRadios1" value="1" data-toggle="radio">No
+		         					</label>
+		         					<label>
+		         						<input type="radio" name="privacy" id="optionsRadios1" value="2" data-toggle="radio">Yes
+		         					</label>
+		         				</div>
+		         				<label style="color:red;"><?php echo form_error($privacy['name']); ?><?php echo isset($errors[$privacy['name']])?$errors[$privacy['name']]:''; ?></label>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label" style="text-align:left">Daily Visits</label>
+							<div class="col-md-7">
+								<input name="daily_visits" type="text" class="form-control" id="inputDefault">
+								<label style="color:red;"><?php echo form_error($daily_visits['name']); ?><?php echo isset($errors[$daily_visits['name']])?$errors[$daily_visits['name']]:''; ?></label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<!--  check box with new window -->
+				<div class="form-group">
+					<label class="col-md-10 control-label" style="text-align:left"><b>I agree to the Terms of Service/Publisher Guidelines</b>
+							<input type="checkbox" name="agree" value="1" id="agree" data-toggle="checkbox" style="margin-left:30px" onchange= "viewTerm()" >  <!-- viewTerm() -->
+					</label>
+					
+				</div>
+				
+				<div>
+					<button name="register" class="btn btn-block btn-primary" type="submit">APPLY</button>
+				</div>
+				 <?php echo form_close(); ?>
+			</div>
+		</div>
 	</div>
+
+ 
+   	<script type="text/javascript">
+
+   		//fancy box 
+   		$(document).ready(function() {
+		$(".fancybox").fancybox();
+		$("select[name='timezone1']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+    	$("select[name='timezone2']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+    	$("select[name='site_category']").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+		});
+
+	    <?php foreach ($timezone_arr as $row){?>
+			$("#timezone1").append("<option value='<?php echo $row->timezone_id;?>'><?php echo $row->timezone_name;?></option>");
+		<?php }?>
+		<?php foreach ($country_arr as $row){?>
+			$("#timezone2").append("<option value='<?php echo $row->country_id;?>'><?php echo $row->country_name;?></option>");
+		<?php }?>
+		<?php foreach ($category_arr as $row){?>
+			$("#site_category").append("<option value='<?php echo $row->category_id;?>'><?php echo $row->category_name;?></option>");
+		<?php }?>
+
+	    <?php foreach ($timezone_arr as $row){?>
+			$("#timezone1").append("<option value='<?php echo $row->timezone_id;?>'><?php echo $row->timezone_name;?></option>");
+		<?php }?>
+		<?php foreach ($country_arr as $row){?>
+			$("#timezone2").append("<option value='<?php echo $row->country_id;?>'><?php echo $row->country_name;?></option>");
+		<?php }?>
+		<?php foreach ($category_arr as $row){?>
+			$("#site_category").append("<option value='<?php echo $row->category_id;?>'><?php echo $row->category_name;?></option>");
+		<?php }?>
+	
+	    function viewTerm()
+	    {
+	        if($('#agree:checked').val() == 1)
+	        { 
+	           
+	            $.fancybox({
+	                    'width'	: '60%',
+	                    'height': '50%',
+	                    'href'  : '<?php echo base_url()?>images/term.php',
+	                    'autoScale'     : false,
+	                    'transitionIn'  : 'none',
+	                    'transitionOut'	: 'none',
+	                    'type'		: 'iframe'
+	            });  
+	       
+
+	            $('#error_term').css('display', 'none');
+	        }
+    	}
+	</script>
+   
+	<div id="footerBlock"></div>
+	 
+
 </div>
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+

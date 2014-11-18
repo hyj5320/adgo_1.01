@@ -4,59 +4,176 @@
 
 <html>
 	<head>
-		<title>ADGO.TV</title>
+		<style>
+			.top_content_footer{
+				color:white;
+			}
+			.top_content_footer_em{
+				color:#0088cc;
+				font-size:1.3em;
+			}
+			#footer_content{
+				color:#555;
+			}
+			.main_content_small{
+				color:#777777;
+				font-size: 1.1em;
+				line-height:1.3em;
+				font-family: "Open Sans", Arial, sans-serif;
+			}
+		</style>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>ADGO.TV</title>		
+		<meta name="keywords" content="Ad Network" />
+		<meta name="description" content="Ad Network">
+		<meta name="author" content="Adgo.tv">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/fontawesome/css/font-awesome.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/owlcarousel/owl.carousel.css" media="screen">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/owlcarousel/owl.theme.css" media="screen">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/magnific-popup/magnific-popup.css" media="screen">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/theme.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/theme-elements.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/theme-blog.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/theme-shop.css">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/theme-animate.css">
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="<?php echo base_url()?>HTML/vendor/modernizr/modernizr.js"></script>
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/rs-plugin/css/settings.css" media="screen">
+		<link rel="stylesheet" href="<?php echo base_url()?>HTML/vendor/circle-flip-slideshow/css/component.css" media="screen">
+
+		<!-- Vendor // Orginally was in footer -->
+		<script src="<?php echo base_url()?>HTML/vendor/jquery/jquery.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.appear/jquery.appear.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.easing/jquery.easing.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery-cookie/jquery-cookie.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/bootstrap/bootstrap.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/common/common.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.validation/jquery.validation.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.stellar/jquery.stellar.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jquery.gmap/jquery.gmap.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/twitterjs/twitter.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/isotope/jquery.isotope.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/owlcarousel/owl.carousel.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/jflickrfeed/jflickrfeed.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/vide/jquery.vide.js"></script>
 		
-		<link href="<?php echo base_url()?>include/bootstrap/css/bootstrap.css" rel="stylesheet">
-		<link href="<?php echo base_url()?>include/css/style.css" rel="stylesheet" type="text/css" />   
-		<link href="<?php echo base_url()?>include/css/counter.css" media="screen" rel="stylesheet" type="text/css" />
+		<!-- Theme Base, Components and Settings -->
+		<script src="<?php echo base_url()?>HTML/js/theme.js"></script>
 		
-		<link href="<?php echo base_url()?>include/css/flat-ui.css" rel="stylesheet">
-	    <link href="<?php echo base_url()?>include/css/demo.css" rel="stylesheet">
+		<!-- Specific Page Vendor and Views -->
+		<script src="<?php echo base_url()?>HTML/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="<?php echo base_url()?>HTML/vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+		<script src="<?php echo base_url()?>HTML/js/views/view.home.js"></script>
 		
-		<script src="<?php echo base_url()?>include/js/application.js"></script>
+		<!-- Theme Custom -->
+		<script src="<?php echo base_url()?>HTML/js/custom.js"></script>
 		
-		<script src="<?php echo base_url()?>include/js/jquery-1.10.2.min.js"></script>
-	    <script src="<?php echo base_url()?>include/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="<?php echo base_url()?>include/js/jquery-1.8.3.min.js"></script>
-		<script src="<?php echo base_url()?>include/js/jquery-2.0.3.min.js"></script>
-	    
-		<script src="<?php echo base_url()?>include/js/bootstrap.min.js"></script>
-	    <script src="<?php echo base_url()?>include/js/bootstrap-select.js"></script>
-	    <script src="<?php echo base_url()?>include/js/bootstrap-switch.js"></script>
+		<!-- Theme Initialization Files -->
+		<script src="<?php echo base_url()?>HTML/js/theme.init.js"></script>
 		
-	    <script src="<?php echo base_url()?>include/js/jquery.ui.touch-punch.min.js"></script>
-	    <script src="<?php echo base_url()?>include/js/jquery.tagsinput.js"></script>
-	    <script src="<?php echo base_url()?>include/js/jquery.placeholder.js"></script>
-		<script src="<?php echo base_url()?>include/js/jquery.flipCounter.1.2.pack.js"></script>
-		<script src="<?php echo base_url()?>include/js/jquery.easing.1.3.js"></script>  
-	    <script src="<?php echo base_url()?>include/js/flatui-checkbox.js"></script>
-	    <script src="<?php echo base_url()?>include/js/flatui-radio.js"></script>
-	    <script src="<?php echo base_url()?>include/js/holder.js"></script>
-	    <script src="<?php echo base_url()?>include/js/flatui-fileinput.js"></script>
-	    <script src="<?php echo base_url()?>include/js/typeahead.js"></script>
-	    
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script type="text/javascript">
+		
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-12345678-1']);
+			_gaq.push(['_trackPageview']);
+		
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		
+		</script>
+		 -->
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="<?php echo base_url()?>css/ie.css">
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+			<script src="vendor/respond/respond.js"></script>
+			<script src="vendor/excanvas/excanvas.js"></script>
+		<![endif]-->
+	
+
 	</head>
 	
-	<body style="margin: 0px">
-		<div id="wrapper">
-			<div id="mainInsideIn">	
+	<div class="body">
+		<header id="header">
 			<?php $uri = $_SERVER["REQUEST_URI"]; ?>
-			
-				<div id="headerTop">
-		    		<div id="hTopInn">
-			    		 <div id="logo"><a href="<?php echo base_url()?>" title=""><img src="<?php echo base_url()?>include/img/topLogo.png"  width="248" height="97" alt="" /></a></div> 
-			            	<div id="topMenu">
-			            		<ul>
-			            		<?php if($this->session->userdata('level') == '10'){?>
-			            				<li><a href="<?php echo base_url()?>admin/site" title="" class=""><span>Site</span></a></li>
-			            				<li><a href="<?php echo base_url()?>admin/users" title="" class=""><span>Users</span></a></li>
-					                	<li><a href="<?php echo base_url()?>admin/report" title="" class=""><span>Report</span></a></li>
-					                	<li><a href="<?php echo base_url()?>admin/approval" title="" class=""><span>approval</span></a></li>
-					                	<li><a href="<?php echo base_url()?>admin/adcode" title="" class=""><span>adcode</span></a></li>
-					                	<li><a href="<?php echo base_url()?>auth/logout" title="" class=""><span>logout</span></a></li>
-			            		<?php } else{?>
+			<div class="container">
+				<h1 class="logo">
+					<a href="<?php echo base_url()?>main">
+						<img alt="Porto" width="220" height="80" data-sticky-width="160" data-sticky-height="60" src="<?php echo base_url()?>images/logo.png">
+					</a>
+				</h1>
+				<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+			</div>
+			<div class="navbar-collapse nav-main-collapse collapse">
+				<div class="container">
+					<nav class="nav-main mega-menu">
+						<ul class="nav nav-pills nav-main" id="mainMenu">
+							<!-- case for admin login -->
+			            	<?php if($this->session->userdata('level') == '10'){?>
+	            				<li><a href="<?php echo base_url()?>admin/site" title="" class=""><span>Site</span></a></li>
+	            				<li><a href="<?php echo base_url()?>admin/users" title="" class=""><span>Users</span></a></li>
+			                	<li><a href="<?php echo base_url()?>admin/report" title="" class=""><span>Report</span></a></li>
+			                	<li><a href="<?php echo base_url()?>admin/approval" title="" class=""><span>approval</span></a></li>
+			                	<li><a href="<?php echo base_url()?>admin/adcode" title="" class=""><span>adcode</span></a></li>
+			                	<li><a href="<?php echo base_url()?>auth/logout" title="" class=""><span>logout</span></a></li>
+			                
+							<!-- case for no-login --> 
+			                <?php } else{ ?>
+								<?php if( !$this->session->userdata('user_id')){?>
+								<li><a href="<?php echo base_url()?>main">Home</a></li>
+								<li><a href="<?php echo base_url()?>auth/register">APPPLY NOW</a></li>
+								<li><a href="<?php echo base_url()?>about/">WHY US?</a>	</li>
+								<li><a href="<?php echo base_url()?>cpm/">OUR RATES</a></li>
+								<li><a href="<?php echo base_url()?>news/">NEWS</a></li>
+								<li><a href="<?php echo base_url()?>auth/contact">CONTACT US</a></li>
+								<li><a href="<?php echo base_url()?>auth/login" title="">LOG IN</a></li>
+							<?php } ?>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		
+		<!--  taking this out for now ..             		
+								
+			            		
 									<?php if( !$this->session->userdata('user_id')){?>
-										<?php if(strpos($uri, 'login')){?> <li class="cur"><a href="<?php echo base_url()?>auth/login" title=""><span>Login</span></a></li>
+										<?php if(strpos($uri, 'login')){?> <li><a href="<?php echo base_url()?>auth/login" title=""><span>Login</span></a></li>
 										<?php }else {?> <li><a href="<?php echo base_url()?>auth/login" title=""><span>Login</span></a></li><?php }?>
 										
 										<?php if(strpos($uri, 'register')){?> <li class="cur"><a href="<?php echo base_url()?>auth/register" title=""><span>Apply Now</span></a></li>
@@ -85,11 +202,17 @@
 			           		</div>
 		      		  </div>
 		 		 </div>
-		 		 
+		
+
+
+		-->	
+
 <?php if($uri != "/" && $uri != "/main" && $uri != "/main/"){?>
 		 		 <div class="headerTopLine"></div>
 <?php } ?>
-		 		 
+
+
+<!-- case for user login -->		 		 
 <?php if($this->session->userdata('user_id')){?>
 	<?php if($uri != "/auth/contact/" && $uri != "/auth/contact" && $uri != "/about/" && $uri != "/about" && $uri != "/cpm/" &&
 			 $uri != "/cpm" && $uri != "/cpm/calculator" && $uri != "/main" && $uri != "/" && $uri != "/main/" &&
