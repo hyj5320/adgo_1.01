@@ -95,6 +95,9 @@
 		
 		<!-- Theme Initialization Files -->
 		<script src="<?php echo base_url()?>HTML/js/theme.init.js"></script>
+
+		<!-- jquery from original design -->
+		<script src="<?php echo base_url()?>include/js/jquery.flipCounter.1.2.pack.js"></script>
 		
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
@@ -134,6 +137,21 @@
 						<img alt="Porto" width="220" height="80" data-sticky-width="160" data-sticky-height="60" src="<?php echo base_url()?>images/logo.png">
 					</a>
 				</h1>
+
+				<!-- If login user print user information on top-->
+				<?php if( ($this->session->userdata('user_id')) && $uri != "/auth/contact/" && $uri != "/cpm" && $uri != "/cpm/calculator" &&
+										 $uri != "/auth/send_again/" && $uri != "/admin/report" && $uri != "/admin/report/" && $uri != "/admin/site" && $uri != "/admin/site/" &&
+										 $uri != "/admin/approval" && $uri != "/admin/adcode" && $uri != "/admin/users"  && $uri != "/admin/users_search"
+				){?>
+				
+					<nav style="margin-right:20px;">
+						<ul class="nav nav-pills nav-top">
+							<li><a href="#" title="">Hi, <?php echo $this->session->userdata('username')?> !</a></li>
+						</ul>
+				</nav>
+				
+				<?php } ?>
+
 				<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
 					<i class="fa fa-bars"></i>
 				</button>
@@ -150,131 +168,44 @@
 			                	<li><a href="<?php echo base_url()?>admin/approval" title="" class=""><span>approval</span></a></li>
 			                	<li><a href="<?php echo base_url()?>admin/adcode" title="" class=""><span>adcode</span></a></li>
 			                	<li><a href="<?php echo base_url()?>auth/logout" title="" class=""><span>logout</span></a></li>
-			                
-							<!-- case for no-login --> 
-			                <?php } else{ ?>
-								<?php if( !$this->session->userdata('user_id')){?>
-								<li><a href="<?php echo base_url()?>main">Home</a></li>
-								<li><a href="<?php echo base_url()?>auth/register">APPPLY NOW</a></li>
-								<li><a href="<?php echo base_url()?>about/">WHY US?</a>	</li>
-								<li><a href="<?php echo base_url()?>cpm/">OUR RATES</a></li>
-								<li><a href="<?php echo base_url()?>news/">NEWS</a></li>
-								<li><a href="<?php echo base_url()?>auth/contact">CONTACT US</a></li>
-								<li><a href="<?php echo base_url()?>auth/login" title="">LOG IN</a></li>
-							<?php } ?>
+							
+							<!-- case for user login -->		 		 
+							<?php } elseif( ($this->session->userdata('user_id')) && $uri != "/auth/contact/" && $uri != "/cpm" && $uri != "/cpm/calculator" &&
+										 $uri != "/auth/send_again/" && $uri != "/admin/report" && $uri != "/admin/report/" && $uri != "/admin/site" && $uri != "/admin/site/" &&
+										 $uri != "/admin/approval" && $uri != "/admin/adcode" && $uri != "/admin/users"  && $uri != "/admin/users_search"
+							){?>
+									 
+					            		<li><a href="<?php echo base_url()?>report/" title="">Earnings</a></li>
+					            		<li><a href="<?php echo base_url()?>adcode/" title="" class="addCode">Ad Code</a></li>
+					            		<li><a href="<?php echo base_url()?>payments/" title="">Payments</a></li>
+					            		<li><a href="<?php echo base_url()?>paymentprofile/" title="" class="paymProf">Payment Profile</a></li> 
+					            		<li><a href="<?php echo base_url()?>new_site/" title="" class="addCode">Add New Site</a></li>
+    				            		<li><a href="<?php echo base_url()?>con_info" title="" class="contInfLink">Contact Info</a></li>
+		            					<li><a href="<?php echo base_url()?>auth/change_password" title="" class="passw">Password</a></li> 
+		                    			<li><a href="<?php echo base_url()?>auth/logout" title="" >Logout</a></li>
+
+		                	<!-- case for not registered user-->
+							<?php } else { ?>
+							<li><a href="<?php echo base_url()?>main">Home</a></li>
+							<li><a href="<?php echo base_url()?>auth/register">APPPLY NOW</a></li>
+							<li><a href="<?php echo base_url()?>about/">WHY US?</a>	</li>
+							<li><a href="<?php echo base_url()?>cpm/">OUR RATES</a></li>
+							<li><a href="<?php echo base_url()?>news/">NEWS</a></li>
+							<li><a href="<?php echo base_url()?>auth/contact">CONTACT US</a></li>
+							<li><a href="<?php echo base_url()?>auth/login" title="">LOG IN</a></li>
+						<?php } ?>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</header>
 
-		
-		<!--  taking this out for now ..             		
-								
-			            		
-									<?php if( !$this->session->userdata('user_id')){?>
-										<?php if(strpos($uri, 'login')){?> <li><a href="<?php echo base_url()?>auth/login" title=""><span>Login</span></a></li>
-										<?php }else {?> <li><a href="<?php echo base_url()?>auth/login" title=""><span>Login</span></a></li><?php }?>
-										
-										<?php if(strpos($uri, 'register')){?> <li class="cur"><a href="<?php echo base_url()?>auth/register" title=""><span>Apply Now</span></a></li>
-										<?php }else{?> <li><a href="<?php echo base_url()?>auth/register" title=""><span>Apply Now</span></a></li><?php }?>
-										
-										<?php if(strpos($uri, 'about')){?> <li class="cur"><a href="<?php echo base_url()?>about/" title=""><span>Why Us?</span></a></li>
-										<?php }else{?> <li><a href="<?php echo base_url()?>about/" title=""><span>Why Us?</span></a></li><?php }?>
-										
-										<?php if(strpos($uri, 'cpm')){?> <li class="cur"><a href="<?php echo base_url()?>cpm/" title=""><span>Our Rates</span></a></li>
-										<?php }else{?> <li><a href="<?php echo base_url()?>cpm/" title=""><span>Our Rates</span></a></li><?php }?>
-										
-										<?php if(strpos($uri, 'contact')){?> <li class="cur"><a href="<?php echo base_url()?>auth/contact" title=""><span>Contact Us</span></a></li>
-										<?php }else{?> <li><a href="<?php echo base_url()?>auth/contact" title=""><span>Contact Us</span></a></li><?php }?>
-									<?php }else{?>
-										<?php if(strpos($uri, 'contact')){?> 
-												<li><a href="<?php echo base_url()?>report/" ><span>My Account</span></a></li>
-												<li class="cur"><a href="<?php echo base_url()?>auth/contact" title=""><span>Contact Us</span></a></li>
-										<?php }else{?> 
-												<li class="cur"><a href="<?php echo base_url()?>report/" ><span>My Account</span></a></li>
-												<li><a href="<?php echo base_url()?>auth/contact" title=""><span>Contact Us</span></a></li>
-										<?php }?>
-					                <?php }?>
-			            		<?php }?>
-			            		
-			                     </ul>
-			           		</div>
-		      		  </div>
-		 		 </div>
-		
-
-
-		-->	
+<!-- taking this out for now..
 
 <?php if($uri != "/" && $uri != "/main" && $uri != "/main/"){?>
 		 		 <div class="headerTopLine"></div>
 <?php } ?>
 
+-->
 
-<!-- case for user login -->		 		 
-<?php if($this->session->userdata('user_id')){?>
-	<?php if($uri != "/auth/contact/" && $uri != "/auth/contact" && $uri != "/about/" && $uri != "/about" && $uri != "/cpm/" &&
-			 $uri != "/cpm" && $uri != "/cpm/calculator" && $uri != "/main" && $uri != "/" && $uri != "/main/" &&
-			 $uri != "/auth/send_again" && $uri != "/auth/send_again/" && 
-			 $uri != "/admin/report" && $uri != "/admin/report/" && $uri != "/admin/site" && $uri != "/admin/site/" &&
-			 $uri != "/admin/approval" && $uri != "/admin/approval/" && $uri != "/admin/adcode" && $uri != "/admin/adcode/" &&
-			 $uri != "/admin/users" && $uri != "/admin/users/" && $uri != "/admin/users_search" && $uri != "/admin/users_search/"
-			 ){?>
-			 
-				<div id="content" style=" padding:0px;" >
-		           <div id="report" style="width: 1100px;">
-		        		<div id="reportL">
-			        		<div class="publisher">
-			                	<h4><span><?php echo $this->session->userdata('username')?></span></h4>
-			                    <p class="publMail"><a href="#" title=""><?php echo $this->session->userdata('email')?></a></p>
-			                    <p class="logOut"><a href="<?php echo base_url()?>auth/logout" title="" ><span>LOGOUT</span></a></p>
-			                </div>
-		        		
-			            	<ul>
-			            		<?php if(strpos($uri, 'report')){?>
-				                	<li class="cur reportIconImg1"><a href="<?php echo base_url()?>report/" title=""><span>Earnings</span></a></li>
-			            		<?php }else{?>
-			            			<li class="reportIconImg1"><a href="<?php echo base_url()?>report/" title=""><span>Earnings</span></a></li>
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'adcode')){?>
-			            			<li class="cur reportIconImg2"><a href="<?php echo base_url()?>adcode/" title="" class="addCode"><span>Ad Code</span></a></li>
-			            		<?php }else{?>
-			            			<li class="reportIconImg2"><a href="<?php echo base_url()?>adcode/" title="" class="addCode"><span>Ad Code</span></a></li>
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'con_info')){?>
-				                	<li class="cur reportIconImg3"><a href="<?php echo base_url()?>con_info" title="" class="contInfLink"><span>Contact Info</span></a></li> 
-			            		<?php }else{?>
-			            			<li class="reportIconImg3"><a href="<?php echo base_url()?>con_info" title="" class="contInfLink"><span>Contact Info</span></a></li> 
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'auth')){?>
-				                	<li class="cur reportIconImg4"><a href="<?php echo base_url()?>auth/change_password" title="" class="passw"><span>Password</span></a></li>  
-			            		<?php }else{?>
-			            			<li class="reportIconImg4"><a href="<?php echo base_url()?>auth/change_password" title="" class="passw"><span>Password</span></a></li> 
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'payments')){?>
-				                	<li class="cur reportIconImg5"><a href="<?php echo base_url()?>payments/" title=""><span>Payments</span></a></li>
-			            		<?php }else{?>
-			            			<li class="reportIconImg5"><a href="<?php echo base_url()?>payments/" title=""><span>Payments</span></a></li>
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'paymentprofile') ||strpos($uri, 'update')){?>
-				                	<li class="cur reportIconImg6"><a href="<?php echo base_url()?>paymentprofile/" title="" class="paymProf"><span>Payment Profile</span></a></li> 
-			            		<?php }else{?>
-			            			<li class="reportIconImg6"><a href="<?php echo base_url()?>paymentprofile/" title="" class="paymProf"><span>Payment Profile</span></a></li> 
-			            		<?php }?>
-			            		
-			            		<?php if(strpos($uri, 'new_site')){?>
-				                	<li class="cur reportIconImg7"><a href="<?php echo base_url()?>new_site/" title="" class="addCode"><span>Add New Site</span></a></li>
-			            		<?php }else{?>
-			            			<li class="reportIconImg7"><a href="<?php echo base_url()?>new_site/" title="" class="addCode"><span>Add New Site</span></a></li>
-			            		<?php }?>
-			                </ul>
-		            	</div>
-	<?php } ?>
-<?php } ?>
 

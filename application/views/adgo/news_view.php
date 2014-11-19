@@ -38,7 +38,7 @@
 						While the US is the highest spender on digital media in terms of absolute dollars, it’s the UK that sports the highest share of total media spending on digital channels, at 47.5% expected this year. That compares with 40.1% in second-place Denmark, 37.5% in third-place Australia, and 27.9% in the US.<br><br>
 						eMarketer bases all of our forecasts on a multipronged approach that focuses on both worldwide and local trends in the economy, technology and population, along with company-, product-, country- and demographic-specific trends, and trends in specific consumer behaviors. We analyze quantitative and qualitative data from a variety of research firms, government agencies, media outlets and company reports, weighting each piece of information based on methodology and soundness.<br><br>
 						In addition, every element of each eMarketer forecast fits within the larger matrix of all our forecasts, with the same assumptions and general framework used to project figures in a wide variety of areas. Regular re-evaluation of each forecast means those assumptions and framework are constantly updated to reflect new market developments and other trends.<br><br>
-						- See more at: <a href ="http://www.emarketer.com/Article/Digital-Ad-Spending-Worldwide-Hit-3613753-Billion-2014/1010736#sthash.ETs3rJYz.dpuf"><i>http://www.emarketer.com/Article/Digital-Ad-Spending-Worldwide-Hit-3613753-Billion-2014/1010736#sthash.ETs3rJYz.dpuf</i></a>
+						- See more at: <a href ="http://www.emarketer.com/Article/Digital-Ad-Spending-Worldwide-Hit-3613753-Billion-2014/1010736#sthash.ETs3rJYz.dpuf" target="_blank"><i>http://www.emarketer.com/Article/Digital-Ad-Spending-Worldwide-Hit-3613753-Billion-2014/1010736#sthash.ETs3rJYz.dpuf</i></a>
 						</p>
 
 					</section>
@@ -84,7 +84,7 @@
 							<br><br>
 							- See more at: 
 							
-								<a href ="http://www.iab.net/about_the_iab/recent_press_releases/press_release_archive/press_release/pr-041014#sthash.rOo79LJY.dpuf"><i>http://www.iab.net/about_the_iab/recent_press_releases/press_release_archive/press_release/pr-041014#sthash.rOo79LJY.dpuf</i></a>
+								<a href ="http://www.iab.net/about_the_iab/recent_press_releases/press_release_archive/press_release/pr-041014#sthash.rOo79LJY.dpuf" target="_blank"><i>http://www.iab.net/about_the_iab/recent_press_releases/press_release_archive/press_release/pr-041014#sthash.rOo79LJY.dpuf</i></a>
 						</p>
 					</section>
 
@@ -143,7 +143,7 @@
 						The figures for individual companies represent net US ad revenues after traffic acquisition costs to partner sites and publishers have been factored out, and include advertising that appears on desktop and laptop computers as well as mobile phones and tablets.
 						<br><br>
 						Read more at 
-						<a href ="http://www.emarketer.com/newsroom/index.php/digital-ad-spending-top-37-billion-2012-market-consolidates/#3bzbZUpVZU9jIUf6.99"><i>http://www.emarketer.com/newsroom/index.php/digital-ad-spending-top-37-billion-2012-market-consolidates/#3bzbZUpVZU9jIUf6.99</i></a>
+						<a href ="http://www.emarketer.com/newsroom/index.php/digital-ad-spending-top-37-billion-2012-market-consolidates/#3bzbZUpVZU9jIUf6.99" target="_blank"><i>http://www.emarketer.com/newsroom/index.php/digital-ad-spending-top-37-billion-2012-market-consolidates/#3bzbZUpVZU9jIUf6.99</i></a>
 					</p>
 					</section>
 					
