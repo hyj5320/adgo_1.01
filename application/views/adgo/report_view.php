@@ -2,6 +2,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>include/css/jquery.datepick.css"> 
 	<link href="<?php echo base_url()?>include/css/jquery.jqplot.css" media="screen" rel="stylesheet" type="text/css" />
 	
+	<script type="text/javascript" src="<?php echo base_url()?>include/js/bootstrap-select.js"></script>
+	
 	<script type="text/javascript" src="<?php echo base_url()?>include/js/jquery.plugin.min.js"></script> 
 	<script type="text/javascript" src="<?php echo base_url()?>include/js/jquery.datepick.js"></script>
 	

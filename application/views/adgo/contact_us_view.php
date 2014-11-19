@@ -92,7 +92,7 @@
 		 	</div>
 		 </div>
  	</div>		
-<!-- Google Maps -->
+	<!-- Google Maps -->
 	
 </div>
 <div class="container" style="padding-top:20px">

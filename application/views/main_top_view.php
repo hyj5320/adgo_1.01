@@ -55,7 +55,7 @@
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="<?php echo base_url()?>HTML/css/custom.css">
-
+		
 		<!-- Head Libs -->
 		<script src="<?php echo base_url()?>HTML/vendor/modernizr/modernizr.js"></script>
 
@@ -98,8 +98,7 @@
 
 		<!-- jquery from original design -->
 		<script src="<?php echo base_url()?>include/js/jquery.flipCounter.1.2.pack.js"></script>
-		
-
+	    
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script type="text/javascript">
 		
