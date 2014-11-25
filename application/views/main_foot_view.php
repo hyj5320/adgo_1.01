@@ -1,5 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');?>
-					<!-- EXPORT AS A FOOTER VIEW -->
+
+			<?php $uri = $_SERVER["REQUEST_URI"]; ?>
+			<!-- EXPORT AS A FOOTER VIEW -->
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
@@ -12,11 +14,18 @@
 							</div>
 						</div>
 						<div class="col-md-3">
+
+							<!-- hide when user is logged in -->
+							<?php if( !( ($this->session->userdata('user_id')) && $uri != "/auth/contact/" && $uri != "/cpm" && $uri != "/cpm/calculator" &&
+								 $uri != "/auth/send_again/" && $uri != "/admin/report" && $uri != "/admin/report/" && $uri != "/admin/site" && $uri != "/admin/site/" &&
+								 $uri != "/admin/approval" && $uri != "/admin/adcode" && $uri != "/admin/users"  && $uri != "/admin/users_search"
+							) ) {?>
 							<h4>Publishers</h4>
 							<div id="footer_content">
 								<a href="<?php echo base_url()?>auth/register" >Apply Now</a><br>
 								<a href="<?php echo base_url()?>cpm/" >Our Rates</a><br>
 							</div>
+							<?php } ?>
 						</div>
 
 						<div class="col-md-2">

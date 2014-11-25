@@ -154,9 +154,9 @@
 
 
  		<div class="row">
-			<div class="col-md-9"></div>
-			<div class="col-md-3">
-            		<img src = "<?php echo base_url()?>images/Go_Read.png" style="width:300px; height:200px;">
+			<div class="col-md-6"></div>
+			<div class="col-md-6 center">
+            		<img src = "<?php echo base_url()?>images/Go_Read.png">
             </div>
  		</div>
  	</div>

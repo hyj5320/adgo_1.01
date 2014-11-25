@@ -73,15 +73,24 @@
 						<div class="form-group" >
 					    	<label class="col-md-5 control-label" style="text-align:left">Notifications</label>
 						    <div class="col-md-7">
-						    	<input type="text" name="username" value="" placeholder="" class="form-control" id="inputDefault">
+						    	<label class="checkbox" for="checkbox1" style="float:right;">
+						    		
+						    		<input type="checkbox" data-toggle="checkbox" id="notifications" value="" placeholder="" id="inputDefault">
+						    	</label>
 						    </div>							
 						</div>
+						
+						<div class="form-group">
+							<div class="col-md-12">
+								<a href="<?php echo base_url()?>auth/change_password">Link to password change</a><br>
+								<a href="<?php echo base_url()?>new_site/">Link to add new site</a><br>
+							</div>
+						</div>
+						<button class="btn btn-block btn-primary" type="submit">Submit</button>
 		
 					</div>
 					<?php echo form_close(); ?>
 					
-					<a href="<?php echo base_url()?>auth/change_password">Link to password change</a><br>
-					<a href="<?php echo base_url()?>new_site/">Link to add new site</a><br>
 				</div>
             </div> 
  		</div>

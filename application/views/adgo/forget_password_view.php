@@ -1,8 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');?>
 
-
-<div id="footerBlock" style="height: 330px;"></div>
-
 	<div id="content">
 
  		<section class="page-top">
@@ -28,15 +25,20 @@
  				<div class="col-md-4">
 	   	 			<div id="check-login-form" class="login-col" style="height: 600px;">
 			   	     	<div class="check-Password-text">
-							<p>Use the form below to retrieve your password.</p>
-							<p>Access to the email address associated with your account is
+							<p>Use the form below to retrieve your password.<br>Access to the email address associated with your account is
 								required.</p>
 						</div>
 						
 						<?php echo form_open('auth/forgot_password');?>
 				        <div class="form-group" >
-				           	<input type="text" name="email" value="" placeholder="Email"  class="form-control input-hg input-login-form" onclick="clear();">
-				           	<label id="id_error" style="color: red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></label>
+				           	<input type="text" name="email" placeholder="Email"  class="form-control input-hg input-login-form" onclick="clear();">
+				           	<label style="color:red;">
+				           		<?php 
+       							foreach ($errors as $k => $v) {
+									echo $errors[$k];
+								}
+				           		?>
+				           	</label>
 				            <span class="fui-mail login-form-icon"></span>
 				        </div>
 				        
@@ -48,8 +50,5 @@
 	      </div>
 		<?php echo form_close(); ?>
  		</div>
-	 	
-		<div id="footerBlock"></div>
-		 
 	</div>
-</div>
+</div> 	

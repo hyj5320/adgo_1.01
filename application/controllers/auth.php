@@ -97,7 +97,7 @@ class auth extends CI_Controller
 	function logout()
 	{
 		$this->adgo_auth_lib->logout();
-		$this->_show_message($this->lang->line('auth_message_logged_out'), '/main');
+		redirect('/main');
 	}
 
 	function register()

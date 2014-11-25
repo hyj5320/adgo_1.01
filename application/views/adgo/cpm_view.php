@@ -122,9 +122,9 @@
                     $('[name=tx_drevenue]').text('Estimated Daily Revenue: $<?php echo $dvar?>');
                     $('[name=tx_mrevenue]').text('Estimated Monthly Revenue: $<?php echo $mvar?>');
                 </script>
-                <div class="col-md-3"></div>
-                <div class="col-md-9">    
-                    <img src = "<?php echo base_url()?>images/Go_Money.png" style="width:250px; height:200px;">
+                <div class="col-md-6"></div>
+                <div class="col-md-6 center">    
+                    <img src = "<?php echo base_url()?>images/Go_Money.png">
                 </div>
             </div> 
         </div>

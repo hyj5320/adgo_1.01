@@ -61,7 +61,7 @@
 								data-y="240"
 								data-speed="300"
 								data-start="1000"
-								data-easing="easeOutExpo"><strong>HMM... WHERE CAN WE<br> ADVERTISE?</strong></div>
+								data-easing="easeOutExpo"><strong>WHERE CAN WE ADVERTISE?</strong></div>
 
 							<div class="tp-caption top-label sfl stl"
 								data-x="50"
@@ -107,8 +107,8 @@
 								data-easing="easeOutBack"><img src="images/Go1_a.png" alt=""></div>
 
 							<div class="tp-caption sft"
-								data-x="600"
-								data-y="220"
+								data-x="620"
+								data-y="265"
 								data-speed="500"
 								data-start="5000"
 								data-easing="easeOutBack"><img src="images/Go1_b.png" alt=""></div>
@@ -181,7 +181,7 @@
 										 data-easing="easeOutExpo"><img src="images/people.png" alt=""></div>
 
 									<div class="tp-caption main-label sft stb"
-										 data-x="190"
+										 data-x="180"
 										 data-y="170"
 										 data-speed="900"
 										 data-start="1000"
@@ -297,13 +297,18 @@
 									</div>
 								</div>
 								<div class="col-md-4 col-md-offset-1" style="padding-bottom:30px">
+									
 									<div class="project-image">
-										<div id="fcSlideshow" class="fc-slideshow">
-											<ul class="fc-slides">
-												<li><img class="img-responsive" src="images/money.png" /></li>
-												<li><img class="img-responsive" src="images/calculator.png" /></li>
-											</ul>
-										</div>
+
+										<a href="<?php echo base_url()?>cpm/">	
+											<div id="fcSlideshow" class="fc-slideshow">
+												<ul class="fc-slides">
+													<li><img class="img-responsive" src="images/money.png" /></li>
+													<li><img class="img-responsive" src="images/calculator.png" /></li>
+												</ul>
+											
+											</div>
+										</a>
 										<strong class="our-work">SHOW ME THE $$$</strong>
 									</div>
 								</div>

@@ -42,7 +42,7 @@
 					<section class="toggle">
 						<label>HOW WE DO IT</label>
 						<p>
-							We encouraged our developer friends and got into a small and smelly dungeon-like room for weeks, nay years on end, and came up with…nope, that’s not it.  The truth is a bunch of us were gathered in front of the TV watching the Super Bowl and we started complaining about how much advertisers spend on a short 20 second spot and all we get is the dust off a breadcrumb compared to the big TV networks.  With the help of our developer friends, we ended up with adgo.tv.  We worked tirelessly to strike up agreements with large advertising moguls, such as Google, Amazon, and DoubleClick, and showed them that our solution delivers on our promise to optimize the publisher’s site and the delivery of ads that are entrusted to adgo.tv.
+							We encouraged our developer friends to get into a small and smelly dungeon-like room for weeks, nay years on end, and came up with…nope, that’s not it.  The truth is a bunch of us were gathered in front of the TV watching the Super Bowl and we started complaining about how much advertisers spend on a short 20 second spot and all we get is the dust off a breadcrumb compared to the big TV networks.  With the help of our developer friends, we ended up with adgo.tv.  We worked tirelessly to strike up agreements with large advertising moguls, such as Google, Amazon, and DoubleClick, and showed them that our solution delivers on our promise to optimize the publisher’s site and the delivery of ads that are entrusted to adgo.tv.
 						</p>
 					</section>
 				</div>
@@ -62,9 +62,9 @@
  		</div>
 
  		<div class="row">
-			<div class="col-md-9"></div>
-			<div class="col-md-3">
-            		<img src = "<?php echo base_url()?>images/Go_WhyUs.png" style="width:300px; height:200px;">
+			<div class="col-md-6"></div>
+			<div class="col-md-6 center">
+            		<img src = "<?php echo base_url()?>images/Go_WhyUs.png">
             </div>
  		</div>
  	</div>

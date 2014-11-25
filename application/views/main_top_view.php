@@ -4,6 +4,8 @@
 
 <html>
 	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>images/favicon.png" />
+		<meta content="<?php echo base_url()?>images/favicon.png" itemprop="image">
 		<style>
 			.top_content_footer{
 				color:white;
@@ -178,15 +180,13 @@
 					            		<li><a href="<?php echo base_url()?>adcode/" title="" class="addCode">Ad Code</a></li>
 					            		<li><a href="<?php echo base_url()?>payments/" title="">Payments</a></li>
 					            		<li><a href="<?php echo base_url()?>paymentprofile/" title="" class="paymProf">Payment Profile</a></li> 
-					            		<li><a href="<?php echo base_url()?>new_site/" title="" class="addCode">Add New Site</a></li>
-    				            		<li><a href="<?php echo base_url()?>con_info" title="" class="contInfLink">Contact Info</a></li>
-		            					<li><a href="<?php echo base_url()?>auth/change_password" title="" class="passw">Password</a></li> 
+    				            		<li><a href="<?php echo base_url()?>account_setting/" title="" class="contInfLink">Account Setting</a></li> 
 		                    			<li><a href="<?php echo base_url()?>auth/logout" title="" >Logout</a></li>
 
 		                	<!-- case for not registered user-->
 							<?php } else { ?>
 							<li><a href="<?php echo base_url()?>main">Home</a></li>
-							<li><a href="<?php echo base_url()?>auth/register">APPPLY NOW</a></li>
+							<li><a href="<?php echo base_url()?>auth/register">APPLY NOW</a></li>
 							<li><a href="<?php echo base_url()?>about/">WHY US?</a>	</li>
 							<li><a href="<?php echo base_url()?>cpm/">OUR RATES</a></li>
 							<li><a href="<?php echo base_url()?>news/">NEWS</a></li>
