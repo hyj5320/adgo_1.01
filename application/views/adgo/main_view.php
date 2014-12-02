@@ -68,7 +68,7 @@
 								data-y="80"
 								data-speed="300"
 								data-start="2000"
-								data-easing="easeOutExpo"><img src="images/GO1_Circle1.png" alt=""></div>
+								data-easing="easeOutExpo"><img src="images/Go1_Circle1.png" alt=""></div>
 							
 							<div class="tp-caption main-label sft stb"
 								data-x="850"
@@ -97,7 +97,7 @@
 								data-y="110"
 								data-speed="300"
 								data-start="4000"
-								data-easing="easeOutExpo"><img src="images/GO1_Circle2.png" alt=""></div>
+								data-easing="easeOutExpo"><img src="images/Go1_Circle2.png" alt=""></div>
 							
 							<div class="tp-caption sft"
 								data-x="430"
@@ -159,7 +159,7 @@
 										 data-y="170"
 										 data-speed="600"
 										 data-start="5500"
-										 data-easing="easeOutExpo"><img src="images/go2.png" alt=""></div>
+										 data-easing="easeOutExpo"><img src="images/Go2.png" alt=""></div>
 							</li>
 
 							<li data-transition="fade" data-slotamount="12" data-masterspeed="2000" >
@@ -178,7 +178,7 @@
 										 data-y="240"
 										 data-speed="600"
 										 data-start="2000"
-										 data-easing="easeOutExpo"><img src="images/people.png" alt=""></div>
+										 data-easing="easeOutExpo"><img src="images/People.png" alt=""></div>
 
 									<div class="tp-caption main-label sft stb"
 										 data-x="180"
@@ -199,7 +199,7 @@
 										 data-y="100"
 										 data-speed="600"
 										 data-start="5000"
-										 data-easing="easeOutExpo"><img src="images/go3_Circles.png" alt=""></div>
+										 data-easing="easeOutExpo"><img src="images/Go3_Circles.png" alt=""></div>
 
 									<div class="tp-caption sft stb"
 										 data-x="800"
@@ -264,7 +264,7 @@
 								<span class="cloud"></span>
 								<div class="col-md-2 col-md-offset-1" style="margin-bottom:130px">
 									<div class="process-image" data-appear-animation="bounceIn">
-										<img src="images/ready.png" alt="" />
+										<img src="images/Ready.png" alt="" />
 									
 										<strong>READY</strong>
 										<p class="main_content_small" style="margin-top:20px">
@@ -276,7 +276,7 @@
 								</div>
 								<div class="col-md-2" style="margin-bottom:130px">
 									<div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="200" >
-										<img src="images/set.png" alt="" />
+										<img src="images/Set.png" alt="" />
 										<strong>SET</strong>
 										<p class="main_content_small" style="margin-top:20px">
 											It's time to <b style="color:black;">SET</b><br>
@@ -287,7 +287,7 @@
 								</div>
 								<div class="col-md-2" style="margin-bottom:130px">
 									<div class="process-image" data-appear-animation="bounceIn" data-appear-animation-delay="400" >
-										<img src="images/go.png" alt="" />
+										<img src="images/Go.png" alt="" />
 										<strong>GO</strong>
 										<p class="main_content_small" style="margin-top:20px">
 											<b style="color:black;">GO</b> with the Adgo.tv<br>
@@ -303,8 +303,8 @@
 										<a href="<?php echo base_url()?>cpm/">	
 											<div id="fcSlideshow" class="fc-slideshow">
 												<ul class="fc-slides">
-													<li><img class="img-responsive" src="images/money.png" /></li>
-													<li><img class="img-responsive" src="images/calculator.png" /></li>
+													<li><img class="img-responsive" src="images/Money.png" /></li>
+													<li><img class="img-responsive" src="images/Calculator.png" /></li>
 												</ul>
 											
 											</div>

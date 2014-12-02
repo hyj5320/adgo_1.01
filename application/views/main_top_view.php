@@ -24,7 +24,7 @@
 				font-family: "Open Sans", Arial, sans-serif;
 			}
 		</style>
-
+		
 		<!-- Basic -->
 		<meta charset="utf-8">
 		<title>ADGO.TV</title>		

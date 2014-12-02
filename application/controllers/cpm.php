@@ -36,15 +36,17 @@ class cpm extends CI_Controller {
 		if($impressions == null){
 			alert('impressions has not been entered.', 'index');
 		}
-		
+
 		$result = $this->cpm_model->index();
 		foreach ($result as $row){
+
 			$m_usa = $row->usa;
 			$m_uk = $row->uk;
 			$m_canada = $row->canada;
 			$m_australia = $row->australia;
 			$m_international = $row->international;
 		}
+
 		
 		$mvar = 0;
 		if($usa != null){

@@ -29,13 +29,13 @@
 						<table class="table table-bordered table-striped table-condensed mb-none">		
 							<thead>		
 								<tr>	
-								    <th>id</th>			
-								    <th>email</th>
-								    <th>url</th>			
-								    <th>title</th>
-								    <th>size</th>
-								    <th>code</th>
-								    <th></th>
+								    <th >id</th>			
+								    <th >email</th>
+								    <th >url</th>			
+								    <th >title</th>
+								    <th >size</th>
+								    <th >code</th>
+								    <th ></th>
 								</tr>
 							</tead>
 							<tbody>
@@ -63,7 +63,7 @@
 							                        <option value="11">336x280 Large Rectangle</option>
 							                        <option value="12">Video Ads</option>
 							                        <option value="14">234x60 Custom</option>
-							   					</select>
+								   					</select>
 											</td>
 											<td ><textarea type="text" name="code" value="" placeholder="ex:>> http://ads-by.madadsmedia.com/tags/20992/8816/async/slider/300x250.js"></textarea></td>
 											<td ><button type="submit">make code</button></td>

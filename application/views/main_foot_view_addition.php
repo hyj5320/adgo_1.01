@@ -41,7 +41,7 @@
 							</div>
 							<div class="col-md-2">
 								<a href="<?php echo base_url()?>" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="<?php echo base_url()?>images/logo_Bottom.png">
+									<img alt="Porto Website Template" class="img-responsive" src="<?php echo base_url()?>images/Logo_Bottom.png">
 								</a>
 							</div>
 						</div>

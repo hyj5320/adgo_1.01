@@ -22,7 +22,7 @@
 <div id="content">
 	<div class="container" style="height: 400px;">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-11">
 				<div class="payments">
 
 					<table class="table table-bordered table-striped table-condensed mb-none center">		
@@ -32,7 +32,7 @@
 							    <th class="center">Revenue</th>			
 							    <th class="center">Minimum Payment</th>			
 							    <th class="center">Carried Over</th>		
-							    <th class="center">Total Due</th>
+							    <th class="center">Total</th>
 							    <th class="center">Status</th>	
 							</tr>							
 						</thead>

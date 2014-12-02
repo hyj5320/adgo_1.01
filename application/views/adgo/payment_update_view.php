@@ -1,121 +1,197 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');?>
 
-<div class="payment">
-	<h1 class="paymentTitle">Payment Profile</h1>
-	<div class="paymentinner">
-		<?php
+
+<!-- content top -->
+<section class="page-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="breadcrumb">
+					<li><a href="<?php echo base_url()?>">Home</a></li>
+					<li class="active">PAYMENT UPDATE</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Update Payment Profile</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<?php
 			$attributes = array('name' =>'paymentW9form', 'id' => '');
 			echo form_open("payment_update/update", $attributes); 
-		?>
+			?>
+			<div class="col-md-2">
+    		
+           	</div>  
+
+			<div class="col-md-8">
+				<div class="form-horizontal form-bordered">
+					
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Name (on your income tax return)</b>
+						</label>
+						<div class="col-md-6">
+							<input type="text" value="" placeholder="" class="form-control" value="" name="name" id="inputDefault">
+						</div>
+					</div>	
+
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Business/disregarded entity name</b>
+						</label>
+						<div class="col-md-6">
+							<input type="text" value="" placeholder="" class="form-control" value="" name="business_name" id="inputDefault">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Federal Tax classification</b>
+						</label>
+						<div class="col-md-6">
+							<div class="FederalRadioList">
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="1" data-toggle="radio">Individual/sole proprietor</label> 
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="2" data-toggle="radio">C Corporation</label> 
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="3" data-toggle="radio">S Corporation </label> 
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="4" data-toggle="radio">Partnership</label> 
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="5" data-toggle="radio">Trust/estate</label> 
+								<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="6" data-toggle="radio">Limited liability company</label> 
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Address</b>
+						</label>
+						<div class="col-md-6">
+							<input type="text" placeholder="" class="form-control" name="address" id="inputDefault">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>City, State, and Zipcode</b>
+						</label>
+						<div class="col-md-6">
+							<input type="text" placeholder="" class="form-control" name="city_state_zipcode" id="inputDefault">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Account number lists</b>
+						</label>
+						<div class="col-md-6">
+							<input type="text" placeholder="" class="form-control" name="account_number" id="inputDefault">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-6 control-label" style="text-align:left;">
+							<b>Requester info (Optional)</b>
+						</label>
+						<div class="col-md-6">
+							<textarea class="paymenttextarea" name="requesters_name" rows="10" cols="40" onfocus="" onblur="" id="inputDefault"></textarea>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8">
+				<div class="form-horizontal form-bordered">
+					<div class="form-group">
+						<div class="col-md-12">
+								<b>Tax payer identification number (Optional)</b><br><br>
 							
-		<h3>Name (as shown on your income tax return)</h3>
-		<p>
-			<input type="text" value="" placeholder="" class="form-control" value="" name="name">
-		</p>
-		<h3>Business Name/disregarded entity name, if different from above</h3>
-		<p>
-			<input type="text" value="" placeholder="" class="form-control" value="" name="business_name">
-		</p>
+								Enter your TIN in the appropriate box. The
+								TIN provided must match the name given on the "Name" line to avoid
+								backup withholding. For individuals, this is your social security
+								number (SSN). However, for a resident alien, sole proprietor, or
+								disregarded entity, see the Part I instructions on page 3. For other
+								entities, it is your employer identification number (EIN). If you do
+								not have a number, see How to get a TIN on page 3.<br><br>
+							
+								<b>Note.</b> If the account is in more than one name, see the chart on page
+								4 for guidelines on whose number to enter. 
+								<a target="_blank" href="http://www.irs.gov/pub/irs-pdf/fw9.pdf">(http://www.irs.gov/pub/irs-pdf/fw9.pdf)</a>
+						</div>
+					</div>
 
-		<h3>Check appropriate box for Federal Tax</h3>
-		<div class="FederalRadioList">
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="1" data-toggle="radio">Individual/sole proprietor</label> 
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="2" data-toggle="radio">C Corporation</label> 
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="3" data-toggle="radio">S Corporation </label> 
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="4" data-toggle="radio">Partnership</label> 
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="5" data-toggle="radio">Trust/estate</label> 
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="6" data-toggle="radio">Limited liability company</label> 
-			<label style="width: 500px; padding: 0px">Enter the tax classification (C=C Corporation, S=S Corporation, P=Partnership)</label>
-			<input type="text" placeholder="" class="form-control" name="tax_classification">
-		</div>
-		<div
-			style="width: 120px; height: 120px; float: left; margin: 80px 0 0 10px; display: block">
-			<label class="radio selectTypenewsite" style="padding-left: 15px;"><input type="radio" name="federal_tax" id="federal_tax" value="7" data-toggle="radio">Limited liability company</label>
-		</div>
-
-		<div class="clearfix"></div>
-
-		<h3>Address</h3>
-
-		<p>
-			<input type="text" placeholder="" class="form-control" name="address">
-		</p>
-		<h3>City, State, and ZIP code</h3>
-
-		<p>
-			<input type="text" placeholder="" class="form-control" name="city_state_zipcode">
-		</p>
-
-		<h3>List account number(s) here (optional)</h3>
-
-		<p>
-			<input type="text" placeholder="" class="form-control" name="account_number">
-		</p>
+					<div class="form-group">
+						<div class="col-md-6">
+							<p>Social Security Number</p>
+							<input type="text" value="" placeholder="" class="form-control" name="social_security_number">
+						</div>
 
 
-		<h3>Requesters name and address (optional)</h3>
-		<textarea class="paymenttextarea" name="requesters_name" rows="10" cols="10" onfocus="" onblur=""></textarea>
+						<div class="col-md-6">
+							<p>Employer Identification Number</p>
+							<input type="text" value="" placeholder="" class="form-control" name="employer_identification_number">
+						</div>								
+					</div>
 
-		<h3>Tax Payer Identification Number (TIN)</h3>
-		<p class="textcolorgrey">Enter your TIN in the appropriate box. The
-			TIN provided must match the name given on the "Name" line to avoid
-			backup withholding. For individuals, this is your social security
-			number (SSN). However, for a resident alien, sole proprietor, or
-			disregarded entity, see the Part I instructions on page 3. For other
-			entities, it is your employer identification number (EIN). If you do
-			not have a number, see How to get a TIN on page 3.</p>
-		<p class="textcolorgrey">
-			Note. If the account is in more than one name, see the chart on page
-			4 for guidelines on whose number to enter. <a target="_blank" href="http://www.irs.gov/pub/irs-pdf/fw9.pdf">(http://www.irs.gov/pub/irs-pdf/fw9.pdf)</a>
-		</p>
-		<div style="width: 50%; float: left">
-			<p>Social Security Number</p>
-			<input style="width: 300px" type="text" value="" placeholder="" class="form-control" name="social_security_number">
-		</div>
 
-		<div style="width: 50%; float: left">
-			<p>Employer Identification Number</p>
-			<input style="width: 300px" type="text" value="" placeholder="" class="form-control" name="employer_identification_number">
-		</div>
-		<div class="clearfix"></div>
-		<h3>Certification</h3>
-		<div class="CertificationDiv">
-			<ul>
-				<li><b>Under penalties of perjury, I certify that:</b></li>
-				<li>1. The number shown on this form is my correct taxpayer
-					identification number (or I am waiting for a number to be issued to
-					me), and</li>
-				<li>2. I am not subject to backup withholding because: (a) I am
-					exempt from backup withholding, or (b) I have not been notified by
-					the Internal Revenue Service (IRS) that I am subject to backup
-					withholding as a result of a failure to report all interest or
-					dividends, or (c) the IRS has notified me that I am no longer
-					subject to backup withholding, and</li>
-				<li>3. I am a U.S. citizen or other U.S. person.</li>
-			</ul>
-		</div>
+					<div class="form-group">
+						<div class="col-md-12">
+							<b>Certification</b><br>
+							<ul>
+								<li>Under penalties of perjury, I certify that:</li>
+								<li>1. The number shown on this form is my correct taxpayer
+									identification number (or I am waiting for a number to be issued to
+									me), and</li>
+								<li>2. I am not subject to backup withholding because: (a) I am
+									exempt from backup withholding, or (b) I have not been notified by
+									the Internal Revenue Service (IRS) that I am subject to backup
+									withholding as a result of a failure to report all interest or
+									dividends, or (c) the IRS has notified me that I am no longer
+									subject to backup withholding, and</li>
+								<li>3. I am a U.S. citizen or other U.S. person.</li>
+							</ul>
+						</div>
+					</div>		
 
-		<h3>Signature</h3>
-		<div style="width: 75%; float: left;">
-			<p name="last_change"></p>
-		</div>
+					<div class="form-group">
+						<label class="col-md-12">
+							Signature
+						</label>
+						<div class="col-md-6">
+							<p>Digital Signature</p>
+							<input type="text" value="" placeholder="" class="form-control" name="digital_signature">
+						</div>
+						<div class="col-md-6">
+							<p>Date</p>
+							<input type="text" value="" placeholder="" class="form-control" name="date">
+						</div>
+					</div>
+					<div class="col-md-12 center">
+						<div class="form-group">
+							<button style="cursor: pointer; background-color: #34495E; color: #ffffff; border: 0px" type="button" onclick="update();">Create New</button>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<button class="btn btn-primary btn-block" type="submit" onclick="query();">Submit</button>
+					</div>	
+					
+				</div>
+			</div>
+		</div>					
+	</div>
+</div>
+				
 
-		<div style="width: 25%; float: left; margin-top: 20px">
-			<button style="cursor: pointer; background-color: #34495E; color: #ffffff; border: 0px" type="button" onclick="update();">Create New</button>
-		</div>
-
-		<div style="width: 50%; float: left; margin-top: 50px">
-			<p>Digital Signature</p>
-			<input style="width: 300px" type="text" value="" placeholder="" class="form-control" name="digital_signature">
-		</div>
-
-		<div style="width: 50%; float: left; margin-top: 50px">
-			<p>Date</p>
-			<input style="width: 300px" type="text" value="" placeholder="" class="form-control" name="date">
-		</div>
-		<div class="clearfix"></div>
-		<div class="form-payment-btn" style="">
-			<button class="btn btn-lg btn-block btn-inverse" type="submit" onclick="query();">Submit</button>
+		
+							
+		
 		<?php echo form_close(); ?>
 		</div>
 	</div>

@@ -43,8 +43,9 @@
 <div id="content">
 	<div class="container">
  		<div class="row" style="margin-bottom:30px;">
+ 			<div class="col-md-3">
+ 			</div>
  			<div class="col-md-6">
-
 				<div class="form-group form-horizontal">
 					<?php
 					$attributes = array('name' =>'searchform', 'id' => '');
@@ -57,8 +58,6 @@
 					</div>
 			        <?php echo form_close(); ?>
  				</div>
- 			</div>
- 			<div class="col-md-6">
   				<div class="adcodecenter">
 			 		<ul class="nav nav-tabs nav-append-content">
 	         	  		<li id="ft" class="tab active" v="0"><a>Javascript</a></li>
@@ -69,7 +68,7 @@
 				        <div class="tab-pane active" id="tab1">
 				             <h1>Recommended Ad Sizes</h1>
 					             
-				             <div name="code" id="code"></div>
+				             <div name="code" id="code" class="center"></div>
 					             
 				        </div>
 						        
@@ -82,7 +81,6 @@
  			</div>
  		</div>
 
-		</div>
 		<div class="row">
 			<div class="col-md-12 center">
 				<b style="color:#ee155a">Please Note:</b>
@@ -107,29 +105,29 @@
 		var i = <?php echo $row->size;?>;
 		var size;
 		switch (i) {
-		  case 2    : size = "728x90 Banner";
+		  case 2    : size = "728x90 Banner ";
 		   break;
-		  case 1   : size = "728x90";
+		  case 1   : size = "728x90 ";
 		   break;
-		  case 3  : size = "160x600 SkyScraper";
+		  case 3  : size = "160x600 SkyScraper ";
 		   break;
-		  case 8  : size = "120x600 Skyscraper";
+		  case 8  : size = "120x600 Skyscraper ";
            break;
-		  case 7  : size = "468x60 Banner";
+		  case 7  : size = "468x60 Banner ";
            break;
-		  case 6  : size = "Pop-unders";
+		  case 6  : size = "Pop-unders ";
            break;
-		  case 9  : size = "320x50 Mobile Banner";
+		  case 9  : size = "320x50 Mobile Banner ";
            break;
-		  case 10  : size = "300x600 Half Page";
+		  case 10  : size = "300x600 Half Page ";
            break;
-		  case 13  : size = "125x125 Button";
+		  case 13  : size = "125x125 Button ";
            break;
-		  case 11  : size = "336x280 Large Rectangle";
+		  case 11  : size = "336x280 Large Rectangle ";
            break;
-		  case 12  : size = "Video Ads";
+		  case 12  : size = "Video Ads ";
            break;
-		  case 13  : size = "234x60 Custom";
+		  case 13  : size = "234x60 Custom ";
            break;
 		  default  : size = "";
 		  break;
@@ -141,7 +139,7 @@
 		$("#code").append("<p style='margin-bottom:0px'>"+size+"Medium Rectangle (Highest CPM Ad Size):</p>");
 		$("#code").append("<label style='line-height:1.2'>Make this ad slide in on the page (yields a higher CPM).</label>");
 		$("#code").append("<div class='clearfix'>");
-		$("#code").append("<textarea>&lt;!-- ADGO.TV Asynchronous Ad Tag For "+ option_text +"--&gt;\r\n&lt;!-- Size: "+ size +"--&gt;\r\n&lt;script src=\"<?php echo $row->code;?>\" type=\"text/javascript\"&gt;&lt;/script&gt;\r\n&lt;!-- ADGO.TV Asynchronous Ad Tag For "+ option_text +"  --&gt;\r\n");
+		$("#code").append("<textarea rows='10' cols='36'>&lt;!-- ADGO.TV Asynchronous Ad Tag For "+ option_text +"--&gt;\r\n&lt;!-- Size: "+ size +"--&gt;\r\n&lt;script src=\"<?php echo $row->code;?>\" type=\"text/javascript\"&gt;&lt;/script&gt;\r\n&lt;!-- ADGO.TV Asynchronous Ad Tag For "+ option_text +"  --&gt;\r\n");
 		$("#code").append("</textarea>");
 		$("#code").append("</div>");
 

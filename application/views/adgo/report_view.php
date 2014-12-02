@@ -179,63 +179,30 @@
 <div id="content">
 	<div class="container">
 		<div class="row">
-			<!-- earning tap -->
-			<div class="col-md-12">
-				<label><b>Earnings</b></label>
-			</div>
-		</div>
-		<div class="row">
 
-			<div class="form-group">
-				<div class="col-md-12">
-					<div class="col-md-2" >
-						<?php
-						$attributes = array('name' =>'searchform', 'id' => '');
-						echo form_open("report/search", $attributes); 
-						?>
-						
-						<input id="popupDateStart" name="startDate" type="text" value="" placeholder="" class="iconDateInput form-control">
-						<script type="text/javascript">document.searchform.startDate.value="<?php echo $startDate?>";</script>
-					
+			<div class="form-group form-horizontal">
+				<div class="col-md-3" style="text-align:right;">
+					<label class="control-label">Site</label>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-12">
+			   			<select name="site" id="site" class="form-control" onchange="document.forms['searchform'].submit();">
+					   		<option value="0">All Sites</option>
+						</select>
+						<script type="text/javascript">document.searchform.site.value="<?php echo $site?>";</script>
 					</div>
-					<div class="col-md-1 center">
-						<div class="form-group">
-							<label>~</label>
-						</div>
-					</div>
-					<div class="col-md-2" style="margin-bottom:15px;">
-						<input id="popupDateEnd" name="endDate" type="text" value="" placeholder="" class="iconDateInput form-control">
-						<script type="text/javascript">document.searchform.endDate.value="<?php echo $endDate?>";</script>		
-					</div>
-					<div class="col-md-2 center" style="margin-bottom:15px;">
-						<button  class="btn btn-primary" type="button" onclick="valid_datePicker();">UPDATE</button>
-					</div>
-					<div class="col-md-5 center">
-						<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', 0);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">TODAY</button>
-						<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', -7);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">LAST 7DAYS</button>
-						<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', -30);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">LAST 30DAYS</button>
-					</div>
-			
 				</div>
 			</div>
 		</div>
-				
+		
 		<div class="row">
-			<div class="col-md-6">
-				<label>Site</label>
-					<div class="form-group">
-						<div class="col-md-4">
-							
-				   			<select name="site" id="site" class="form-control" onchange="document.forms['searchform'].submit();">
-						   		<option value="0">All Sites</option>
-							</select>
-						</div>
-					</div>
-					<script type="text/javascript">document.searchform.site.value="<?php echo $site?>";</script>
-				
-				<label>Size</label>
-				<div class="form-group">
-					<div class="col-md-4">
+
+			<div class="form-group form-horizontal">
+				<div class="col-md-3" style="text-align:right;">
+					<label class="control-label">Size</label>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-12">
 						<select name="size" id="size" class="form-control" onchange="document.forms['searchform'].submit();">
 					     	<option value="0">All Media Types</option>
 			        		<option value="2">728x90 Banner</option>
@@ -252,73 +219,111 @@
 			                <option value="14">234x60 Custom</option>
 						</select>
 					</div>
-				</div>
 				<script type="text/javascript">document.searchform.size.value="<?php echo $size?>";</script>
+				</div>
 			</div>
-			<?php echo form_close(); ?>
+		</div>
+		<div class="row">
+			<div class="form-group form-horizontal">
+				<div class="col-md-3" style="text-align:right;">
+					<label class="control-label">Date</label>
+				</div>
+				<div class="col-md-6">
+					<?php
+					$attributes = array('name' =>'searchform', 'id' => '');
+					echo form_open("report/search", $attributes); 
+					?>
+					<div class="col-md-5">
+						<input id="popupDateStart" name="startDate" type="text" value="" placeholder="" class="iconDateInput form-control">
+						<script type="text/javascript">document.searchform.startDate.value="<?php echo $startDate?>";</script>
+					</div>
+					<div class="col-md-2 center">
+						<label class="control-label">~</label>
+					</div>
+					<div class="col-md-5">
+						<input id="popupDateEnd" name="endDate" type="text" value="" placeholder="" class="iconDateInput form-control">
+						<script type="text/javascript">document.searchform.endDate.value="<?php echo $endDate?>";</script>		
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group">
+				<div class="col-md-3"></div>
+				<div class="col-md-6 center">
+					<button  class="btn btn-primary" type="button" onclick="valid_datePicker();">UPDATE</button>
+					<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', 0);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">TODAY</button>
+					<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', -7);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">LAST 7DAYS</button>
+					<button  class="btn btn-primary"  type="button" onclick="$('#popupDateStart').datepick('setDate', -30);$('#popupDateEnd').datepick('setDate', 0);valid_datePicker();">LAST 30DAYS</button>
+				</div>
+			</div>
+		</div>
+		<?php echo form_close(); ?>
 			
-			<div class="col-md-6">
-				<!-- table for reporting -->
-   				<table cellpadding="0" class="display" cellspacing="0" id="reportTbl">
-    				<thead>
-       					 <tr>
-				            <th>Date</th>			
-				            <th>Impressions</th>
-				            <th>Paid Impressions</th>
-				            <th>eCPM</th>			
-				            <th class="lastTh">Revenue</th>
-				        </tr>
-    				</thead>
-    
-				    <tbody>
-				    	<?php if(count($result) < 1){?>
-				    		<tr>
-				    			<td colspan="5">No data available in table</td>
-				    		</tr>
-				    	<?php }else{?>
-					    	<?php foreach($result as $row){?>
-								<tr>
-									<td><?php echo substr($row->date, 0, 10)?></td>
-									<td><?php echo $row->impressions?></td>
-									<td><?php echo $row->paid_impressions?></td>
-									<td>$<?php echo $row->ecpm?></td>
-									<td><span class="gtip">$<?php echo $row->revenue?></span></td>
-								</tr>
-							<?php }?>
-				    	<?php }?>
-				    </tbody>
-    
-				    <tfoot>
-				       <?php foreach ($result_sum as $row){?>
-						   <tr>
-						      <td class="total">Totals </td>
-				      		  <td class="total"><?php if(count($result) > 0){?><?php echo $row->impressions?><?php } else{?>0<?php }?></td>
-						      <td class="total"><?php if(count($result) > 0){?><?php echo $row->paid_impressions?><?php } else{?>0<?php }?></td>
-						      <td class="total"><?php if(count($result) > 0){?>$<?php echo $row->ecpm?><?php } else{?>0<?php }?></td>
-						      <td class="total lastTd"><?php if(count($result) > 0){?>$<?php echo $row->revenue?><?php } else{?>0<?php }?></td>
-						   </tr>
-				       <?php }?>
-				    </tfoot>
-				</table>
-			</div>
-		</div>	
-		<div class="row ">
-			<div class="col-md-12 center">
-   				
-				<div class="reportMainNav" style="text-align: center;"></div>            
-
- 			</div>			
-		</div>					
-
  		<div class="row">
- 			<div class="col-md-2"></div>
- 			<div class="col-md-8 center">
+ 			<div class="col-md-3"></div>
+	 			<div class="col-md-6 center">
+	 				<!-- table for reporting -->
+	 				<div class="table-responsive">
+	 					<table cellpadding="0" class="table table-bordered table-striped table-condensed mb-none" cellspacing="0" id="reportTbl">
+		    				<thead>
+		       					 <tr>
+						            <th>Date</th>			
+						            <th>Impressions</th>
+						            <th>Paid Impressions</th>
+						            <th>eCPM</th>			
+						            <th class="lastTh">Revenue</th>
+						        </tr>
+		    				</thead>
+		    
+						    <tbody>
+						    	<?php if(count($result) < 1){?>
+						    		<tr>
+						    			<td colspan="5">No data available in table</td>
+						    		</tr>
+						    	<?php }else{?>
+							    	<?php foreach($result as $row){?>
+										<tr>
+											<td><?php echo substr($row->date, 0, 10)?></td>
+											<td><?php echo $row->impressions?></td>
+											<td><?php echo $row->paid_impressions?></td>
+											<td>$<?php echo $row->ecpm?></td>
+											<td><span class="gtip">$<?php echo $row->revenue?></span></td>
+										</tr>
+									<?php }?>
+						    	<?php }?>
+						    </tbody>
+		    
+						    <tfoot>
+						       <?php foreach ($result_sum as $row){?>
+								   <tr>
+								      <td class="total">Totals </td>
+						      		  <td class="total"><?php if(count($result) > 0){?><?php echo $row->impressions?><?php } else{?>0<?php }?></td>
+								      <td class="total"><?php if(count($result) > 0){?><?php echo $row->paid_impressions?><?php } else{?>0<?php }?></td>
+								      <td class="total"><?php if(count($result) > 0){?>$<?php echo $row->ecpm?><?php } else{?>0<?php }?></td>
+								      <td class="total lastTd"><?php if(count($result) > 0){?>$<?php echo $row->revenue?><?php } else{?>0<?php }?></td>
+								   </tr>
+						       <?php }?>
+						    </tfoot>
+						</table>
+	 				</div>
+   				
+ 			</div>
+
+ 		</div>
+ 		<div class="row">
+ 			<div class="col-md-3"></div>
+ 			<div class="col-md-6 center">
 				<!-- chart division -->
-				<div class="reportMainChart center" >
-					<div id="chartdiv"  style="height: 300px; width: 750px;"></div> <h5>Estimates Only. Numbers can take up to 2 days to finalize.</h5>
-				</div>				
+				<div class="reportMainChart">
+				<div id="chartdiv"></div> 
+ 				</div>
+ 				<h5>Estimates Only. Numbers can take up to 2 days to finalize.</h5>
  			</div>
  		</div>
+
+
  	</div>
  </div>	
 
